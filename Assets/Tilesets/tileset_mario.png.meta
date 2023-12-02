@@ -623,7 +623,7 @@ TextureImporter:
         height: 168
       alignment: 9
       pivot: {x: 0.66808957, y: 0.046286445}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 10, y: 0, z: 4, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -1117,6 +1117,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: tileset_mario_48
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 826
+        width: 5
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48ec621993a49f9b084fb099b0e08d14
+      internalID: 1453945758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -1171,6 +1192,7 @@ TextureImporter:
       tileset_mario_45: 1205675097
       tileset_mario_46: 524471865
       tileset_mario_47: -744973172
+      tileset_mario_48: 1453945758
       tileset_mario_5: -1271333526
       tileset_mario_6: 333468292
       tileset_mario_7: 1592382502

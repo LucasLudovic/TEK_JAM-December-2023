@@ -2,12 +2,14 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class PlayerController : MonoBehaviour
 {
     public float speed = 5F;
     public float jumpForce = 10F;
     public int healthPoints = 3;
+    public int grades = 0;
 
     private Rigidbody2D _rb;
     private SpriteRenderer _spriteRenderer;
@@ -29,18 +31,17 @@ public class PlayerController : MonoBehaviour
         Moving();
         Jumping();
         Invincibility();
+        if (healthPoints <= 0)
+            Application.Quit();
     }
 
-    private void OnCollisionEnter2D(Collision2D other)
-    {
+    private void OnCollisionStay2D(Collision2D other)
+    {        
         if (other.gameObject.CompareTag("Ground"))
         {
             _isGrounded = true;
         }
-    }
 
-    private void OnCollisionStay2D(Collision2D other)
-    {
         if (other.gameObject.CompareTag("Enemy") && !_isInvincible)
         {
             print("Here");
