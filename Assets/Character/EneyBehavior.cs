@@ -26,9 +26,9 @@ public class EneyBehavior : MonoBehaviour
             return;
         }
         if (transform.position.x <= Origine_x - 5.0)
-            Thrust = new Vector2(-5, 0);
-        if (transform.position.x >= Origine_x + 5.0)
             Thrust = new Vector2(5, 0);
+        if (transform.position.x >= Origine_x + 5.0)
+            Thrust = new Vector2(-5, 0);
         gameObject.GetComponent<Rigidbody2D>().AddForce(Thrust);
     }
 
