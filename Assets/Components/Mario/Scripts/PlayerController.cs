@@ -35,19 +35,23 @@ public class PlayerController : MonoBehaviour
             Application.Quit();
     }
 
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("Enemy") && !_isInvincible)
+        {
+            print("Here");
+            healthPoints -= 1;
+            grades -= 1;
+            _isInvincible = true;
+            _timer = 0;
+        }
+    }
+
     private void OnCollisionStay2D(Collision2D other)
     {        
         if (other.gameObject.CompareTag("Ground"))
         {
             _isGrounded = true;
-        }
-
-        if (other.gameObject.CompareTag("Enemy") && !_isInvincible)
-        {
-            print("Here");
-            healthPoints -= 1;
-            _isInvincible = true;
-            _timer = 0;
         }
     }
 
